@@ -2,21 +2,11 @@
 Created by Allison Valdez
 January 6, 2021
 Project: Alarm Clock
+
 See the README for important project notes and intentions for the project.
 """
 
-"""
-1. Tkinter: creates a dialog box to provide: information or to method to gather 
-it from the user, a fast & easy way to create GUI applications, 
-and a powerful object orientated interface to the TK GUI toolkit.
-2. datetime: combines the date and time information gathered from the module (
-mostly for dates)
-3. time: usually used for Unix systems timestamps (mostly for timing)
-4. winsound: enables sound playing mechanism in window systems
-"""
 
-
-from tkinter import *
 import datetime
 import time
 import winsound
@@ -35,8 +25,8 @@ def sound_alarm(timer):
 
     while True:
         """
-        .sleep(1) halts the execution of further commands until we receive 
-        a time value from the user. 
+        .sleep(1) halts the execution of further commands by 1 second until we 
+        receive the time or prompt from the user. 
         """
         time.sleep(1)
 
@@ -68,16 +58,26 @@ def sound_alarm(timer):
             winsound.PlaySound("sound.wav", winsound.SND_ASYNC)
             break
 
-def actual_time():
+
+def actual_time(hours, mins, secs):
+    """
+    This function takes in the user input (in the proper string format) for the
+    alarm time they wish to trigger. This takes the same parameter arguement
+    as the function above.
+
+    :param hours: parameter of hour gathered from the user
+    :param mins: parameter of min gathered from the user
+    :param secs: parameter of second gathered from the user
+    :return: the proper time format gathered from the user
     """
 
-    :return:
+    # Gets the time inputed from the user
+    timer = f"{hours.__get__()}:{mins.__get__()}:{secs.__get__()}"
+
+    hours.__get__()
+
     """
-
-
-
-
-
-
-
-
+    triggers the alarm function above based on the input gathered from the 
+    user
+    """
+    sound_alarm(timer)
