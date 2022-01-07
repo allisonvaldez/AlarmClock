@@ -6,10 +6,10 @@ Project: Alarm Clock
 See the README for important project notes and intentions for the project.
 """
 
-
 import datetime
 import time
 import winsound
+from Mod1.gui_tkinter import TheTKWindow
 
 
 def sound_alarm(timer):
@@ -81,3 +81,11 @@ def actual_time(hours, mins, secs):
     user
     """
     sound_alarm(timer)
+
+
+"""
+This calls the TKWindow class and utilizes the functions declared to run the 
+GUI window.
+"""
+clock_window = TheTKWindow()
+clock_window.start()
