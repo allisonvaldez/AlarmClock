@@ -19,6 +19,7 @@ def sound_alarm(timer):
     automatically set to true) which makes this function automatically set to
     triggered to be set to work.
 
+    :param winsound:
     :param timer: The alarm time that triggers the alarm
     :return: An alarm being played
     """
@@ -88,4 +89,4 @@ This calls the TKWindow class and utilizes the functions declared to run the
 GUI window.
 """
 clock_window = TheTKWindow()
-clock_window.start()
+clock_window.begin_clock()
