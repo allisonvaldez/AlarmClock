@@ -12,7 +12,7 @@ we're very simply making it easier for other scripts to access the
 process_files function. Note: other scripts and functions are still accessible
 """
 
-from Mod1.gui_tkinter import TheTKWindow
+from Mod1.gui_main_window import MainWindow
 from Mod1.__main__ import *
 
 print(f"the __init__ file is opened")

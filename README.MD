@@ -1,8 +1,10 @@
 # A Simple Alarm Clock
 This project is meant for me to practice coding with python via creating an 
-alarm clock that uses a simple GUI interface. I am presented with the following 
-task: write a function that takes an alarm time from a user and plays a 
-random video once the alarm time is reached.
+alarm clock that uses a simple GUI interface. I utilized modules and 
+separate class module files to improve my organization and understanding of 
+classes. I am presented with the following task: write a function that takes 
+an alarm time from a user and plays a random sound once the alarm time is 
+reached.
 
 
 ## Running The Project
