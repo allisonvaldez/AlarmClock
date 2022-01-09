@@ -8,7 +8,8 @@ See the README for important project notes and intentions for the project.
 
 import datetime
 import time
-import winsound
+from beepy import beep
+
 from Mod1.gui_tkinter import TheTKWindow
 
 
@@ -19,7 +20,6 @@ def sound_alarm(timer):
     automatically set to true) which makes this function automatically set to
     triggered to be set to work.
 
-    :param winsound:
     :param timer: The alarm time that triggers the alarm
     :return: An alarm being played
     """
@@ -48,15 +48,13 @@ def sound_alarm(timer):
 
         """
         Set an if statement to check if the timer is the same time as the 
-        current time recorded. If they are equal then the alarm should sound.
-        
-        winsound.PlaySound(sound, flag): returns an immediate asynchronous 
-        sound based on two arguments (sound title and flag). It will display a 
-        message that the sound is being played.
+        current time recorded. If they are equal then the alarm should sound. 
+        Tried to utilize winsound but it will not import for me to call the 
+        functions to sound the alarm--but I chose to use beepy instead.
         """
         if current_time_now == timer:
             print(f"The alarm sounded. It is:", current_time_now)
-            winsound.PlaySound("sound.wav", winsound.SND_ASYNC)
+            beep(sound="ping")
             break
 
 
