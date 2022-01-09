@@ -9,8 +9,9 @@ See the README for important project notes and intentions for the project.
 import datetime
 import time
 from beepy import beep
-
 from Mod1.gui_tkinter import TheTKWindow
+
+print(f"the __main__ file is opened")
 
 
 def sound_alarm(timer):
@@ -24,7 +25,10 @@ def sound_alarm(timer):
     :return: An alarm being played
     """
 
+    print(f"beginning alarm function triggered")
+
     while True:
+        print(f"while true statement triggered")
         """
         .sleep(1) halts the execution of further commands by 1 second until we 
         receive the time or prompt from the user. 
@@ -53,6 +57,7 @@ def sound_alarm(timer):
         functions to sound the alarm--but I chose to use beepy instead.
         """
         if current_time_now == timer:
+            print(f"if current time = alarm if statement triggered")
             print(f"The alarm sounded. It is:", current_time_now)
             beep(sound="ping")
             break
@@ -69,6 +74,7 @@ def actual_time(hours, mins, secs):
     :param secs: parameter of second gathered from the user
     :return: the proper time format gathered from the user
     """
+    print(f"actual time function triggered")
 
     # Gets the time inputed from the user
     timer = f"{hours.__get__()}:{mins.__get__()}:{secs.__get__()}"

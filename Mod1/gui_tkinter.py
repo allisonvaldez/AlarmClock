@@ -1,11 +1,20 @@
 """
+Created by Allison Valdez
+January 6, 2021
+Project: Alarm Clock
+"""
+
+
+"""
 This file is in charge of creating the GUI that TKinter will use. I will
-import this file into the main.py file to run it. I wanted to keep the
+import this file into the __main__.py file to run it. I wanted to keep the
 functionalities of the code separate for design purposes. I completed this by
 creating a class wrapper for my code to have mobility throughout the program.
 """
 
 from tkinter import *
+
+print(f"the gui_tkinter file is opened")
 
 
 # this is the class wrapper
@@ -35,13 +44,15 @@ class TheTKWindow:
         frame = Frame(self.root)
         frame.pack()
 
-        # sets the hour variables
+        """
+        sets the hour variable to a string and makes it to automatically 
+        populate with 00 when it is displayed.
+        """
         hour = StringVar(self.root)
         hours = ('00', '01', '02', '03', '04', '05', '06', '07', '08', '09',
                  '10', '11', '12', '13', '14', '15', '16', '17', '18', '19',
                  '20', '21', '22', '23', '24')
         hour.set(hours[0])
-
         hrs = OptionMenu(frame, hour, *hours)
         hrs.pack(side=LEFT)
 
@@ -81,7 +92,7 @@ class TheTKWindow:
 
         :return: the proper GUI interface update
         """
-
+        print(f"begin clock function triggered")
         """
         runs the event loop to monitor for events or changes for the GUI window
         """
